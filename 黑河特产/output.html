@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品展示</title>
+    <style>
+        table { width: 80%; margin: auto; border-collapse: collapse; text-align: center; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f2f2f2; }
+        img { width: 100px; height: auto; cursor: pointer; transition: 0.3s; }
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); }
+        .modal img { margin: auto; display: block; width: 50%; }
+        .close { position: absolute; top: 20px; right: 30px; color: white; font-size: 30px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2 style="text-align:center;">商品展示表</h2>
+    <table>
+        <tr>
+            <th>图片</th>
+            <th>商品条码</th>
+            <th>商品名称</th>
+            <th>单位</th>
+            <th>售价</th>
+        </tr>
+
+        <tr>
+            <td><img src="C:/Users/liu-i/Desktop/商品表/pdf/黑河特产/png/qwer1.png" alt="沙棘叶茶" onclick="openModal(this.src)"></td>
+            <td>21</td>
+            <td>沙棘叶茶</td>
+            <td>盒</td>
+            <td>297.00</td>
+        </tr>
+    
+        <tr>
+            <td><img src="C:/Users/liu-i/Desktop/商品表/pdf/黑河特产/png/qwer2.png" alt="（袋）野生蓝莓果汁饮料500ml" onclick="openModal(this.src)"></td>
+            <td>6932986201154</td>
+            <td>（袋）野生蓝莓果汁饮料500ml</td>
+            <td>袋</td>
+            <td>13.50</td>
+        </tr>
+    
+        <tr>
+            <td><img src="C:/Users/liu-i/Desktop/商品表/pdf/黑河特产/png/qwer3.png" alt="沙棘油胶囊" onclick="openModal(this.src)"></td>
+            <td>6932986202366</td>
+            <td>沙棘油胶囊</td>
+            <td>盒</td>
+            <td>328.00</td>
+        </tr>
+    
+        <tr>
+            <td><img src="C:/Users/liu-i/Desktop/商品表/pdf/黑河特产/png/qwer4.png" alt="（袋）沙棘原浆500ml" onclick="openModal(this.src)"></td>
+            <td>6932986255577</td>
+            <td>（袋）沙棘原浆500ml</td>
+            <td>袋</td>
+            <td>27.00</td>
+        </tr>
+    
+        <tr>
+            <td><img src="C:/Users/liu-i/Desktop/商品表/pdf/黑河特产/png/qwer5.png" alt="（箱）沙棘原浆（500mlx4袋）" onclick="openModal(this.src)"></td>
+            <td>6932986255584</td>
+            <td>（箱）沙棘原浆（500mlx4袋）</td>
+            <td>箱</td>
+            <td>108.00</td>
+        </tr>
+    
+        <tr>
+            <td><img src="C:/Users/liu-i/Desktop/商品表/pdf/黑河特产/png/qwer6.png" alt="（瓶）大果沙棘饮料500ml" onclick="openModal(this.src)"></td>
+            <td>6932986280104</td>
+            <td>（瓶）大果沙棘饮料500ml</td>
+            <td>瓶</td>
+            <td>10.30</td>
+        </tr>
+    
+        <tr>
+            <td><img src="C:/Users/liu-i/Desktop/商品表/pdf/黑河特产/png/qwer7.png" alt="（箱）大果沙棘饮料500mlx12瓶" onclick="openModal(this.src)"></td>
+            <td>6932986280180</td>
+            <td>（箱）大果沙棘饮料500mlx12瓶</td>
+            <td>箱</td>
+            <td>122.00</td>
+        </tr>
+    
+        <tr>
+            <td><img src="C:/Users/liu-i/Desktop/商品表/pdf/黑河特产/png/qwer8.png" alt="嫩江佳禾黑全麦粉" onclick="openModal(this.src)"></td>
+            <td>156</td>
+            <td>嫩江佳禾黑全麦粉</td>
+            <td>袋</td>
+            <td>40.00</td>
+        </tr>
+    
+        <tr>
+            <td><img src="C:/Users/liu-i/Desktop/商品表/pdf/黑河特产/png/qwer9.png" alt="双鸭山四方屯全麦面粉" onclick="openModal(this.src)"></td>
+            <td>157</td>
+            <td>双鸭山四方屯全麦面粉</td>
+            <td>袋</td>
+            <td>52.00</td>
+        </tr>
+    
+    </table>
+    <div class="modal" id="myModal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImg" src="" alt="放大图片">
+    </div>
+    <script>
+        function openModal(src) {
+            document.getElementById('myModal').style.display = 'block';
+            document.getElementById('modalImg').src = src;
+        }
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
